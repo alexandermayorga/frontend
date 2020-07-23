@@ -1,0 +1,39 @@
+body{
+    background: #f9f9f9;
+}
+
+.box{
+    height: 100px;
+    min-width: 100px;
+}
+
+.item-1{
+    background-color: firebrick;
+}
+.item-2{
+    background-color:rebeccapurple;
+}
+.item-3{
+    background-color: goldenrod;
+}
+
+/* [=== Regular ===] */
+.normal-container{
+    background: pink
+}
+.normal-container:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.normal-container .box{
+    float: left;
+}
+
+
+/* [=== Flexbox ===] */
+.flex-container {
+    background: cornflowerblue;
+    display: flex
+}
