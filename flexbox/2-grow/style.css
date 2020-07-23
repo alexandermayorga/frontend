@@ -1,0 +1,38 @@
+body { background: #f9f9f9; }
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.normal-container{ background: pink }
+.flex-container { background: cornflowerblue; }
+.item-1,.item-4{ background-color: lightseagreen; }
+.item-2,.item-5{ background-color:brown; }
+.item-3,.item-6{ background-color: goldenrod; }
+.box{
+    height: 100px;
+    min-width: 100px;
+}
+
+/* [=== Flexbox ===] */
+.flex-container {
+    display: flex
+}
+
+/* Equal Distribution */
+.item-1{  flex-grow: 1; }
+.item-2{  flex-grow: 1; }
+.item-3{  flex-grow: 1; }
+
+/* Different Column Sizing */
+.item-4{  flex-grow: 4; }
+.item-5{  flex-grow: 1; }
+.item-6{  flex-grow: 2; }
+
+/* Bootstrap Grid Style columns */
+.bootstrap .item-1{  flex-grow: 2; }
+.bootstrap .item-2{  flex-grow: 2; }
+.bootstrap .item-3{  flex-grow: 2; }
+.bootstrap .item-4{  flex-grow: 2; }
+.bootstrap .item-5{  flex-grow: 2; }
+.bootstrap .item-6{  flex-grow: 2; }

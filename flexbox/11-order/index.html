@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Nested Menus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <nav class="menu menu-1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Services</a></li>
+            </ul>
+
+            <ul class="social">
+                <li><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+
+        <section id="view-switch">
+            <p>Layout: <a href="#" id="grid">Grid</a> | <a href="#" id="stack">Stack</a></p>
+        </section>
+
+        <section class="posts" id="posts">
+            <article class="post">
+                <div class="title">Post 1</div>
+                <div class="excerpt">Our Sun Shines Bright. Our Sun Shines Bright. Can a man still be brave if he’s afraid? That is the only time a man can
+                be brave.I would like a trial by combat. House Tarly of Horn Hill</div>
+            </article>
+            <article class="post">
+                <div class="title">Post 2</div>
+                <div class="excerpt">Nuhor lir gurenna. Zyhys onoso jehikagon Aeksiot epi, se gis hen syndrorro jemagon. Vilibazmosa iderenni emilun. Skorī
+                demalyti tymptir tymis, erinis ia morghulis. Zyhys perzys stepagon Aeksio Ono jorepi, se morghultas lys qelitsos
+                sikagon.</div>
+            </article>
+            <article class="post">
+                <div class="title">Post 3</div>
+                <div class="excerpt">Ezas eshna gech ahilee! Anha dothrak chek asshekh. Fini hazi? Jin ave sekke verven anni m'orvikoon. Jin ave sekke verven
+                anni m'orvikoon.</div>
+            </article>
+            <article class="post">
+                <div class="title">Post 4</div>
+                <div class="excerpt">Sikudi nopazmi! Ao ynoma diniluks? Skoros morghot vestri? Bantis zobrie issa se ossyngnoti ledys. Valor dohaeris. Sikudi
+                nopazmi! Valor dohaeris.</div>
+            </article>
+            <article class="post">
+                <div class="title">Post 5</div>
+                <div class="excerpt">Fire and blood. House Tarly of Horn Hill And now his watch is ended. Can a man still be brave if he’s afraid? That is
+                the only time a man can be brave.All men must die. A good act does not wash out the bad, nor a bad act the good. Each
+                should have its own reward. Can a man still be brave if he’s afraid? That is the only time a man can be brave.</div>
+            </article>
+            <article class="post">
+                <div class="title">Post 6</div>
+                <div class="excerpt">Shekh ma shieraki anni. San athchomari yeraan. Shekh ma shieraki anni. Anha dothrak chek asshekh. Jalan atthirari anni.
+                Nevakhi vekha ha maan: Rekke, m'aresakea norethi fitte. Khal ahhas arakh. Ezas eshna gech ahilee!</div>
+            </article>
+        </section>
+    </div>
+    <script>
+        document.getElementById('grid').addEventListener('click',(e)=>{
+            e.preventDefault();
+            document.getElementById('posts').classList.remove('stack')
+        })
+        document.getElementById('stack').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('posts').classList.add('stack')
+        })
+    </script>
+</body>
+</html>

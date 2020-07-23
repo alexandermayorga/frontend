@@ -1,0 +1,87 @@
+body { 
+    background: #f9f9f9;
+    font-family: sans-serif;
+ }
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-1{background: cornflowerblue;}
+.menu-2{background: pink;}
+.menu-3{background: darkslateblue;}
+.menu-4{background: darkcyan;}
+.menu-5{background: darksalmon;}
+.menu-6{background: saddlebrown;}
+.menu-7{background: rebeccapurple;}
+
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu a{
+    border:1px solid goldenrod;
+    background-color: lightgray;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.menu a:hover{
+    background-color: lightslategray;
+}
+
+@media screen and (min-width:768px){
+    .menu a{
+        text-align: center;
+    }
+    .menu ul{
+        display: flex;
+    }
+
+    /* [ MENU 1 ] */
+    .menu-1 li{
+        flex:1 1 0;
+    }
+
+    /* [ MENU 1 ] */
+    .menu-2 ul{
+        justify-content: center;
+    }
+    .menu-2 li{
+        flex: 0 0 0;
+    }
+    .menu-2 li:first-child {
+        flex: 0 0 200px;
+    }
+
+    /* [ MENU 3 ] */
+    .menu-3 ul{
+        justify-content: flex-end;
+    }
+    .menu-3 li{
+        flex: 0 1 0px;
+    }
+    /* [ MENU 4 ] */
+    .menu-4 ul{
+        /* This is default */
+        justify-content: flex-start; 
+    }
+
+    /* [ MENU 5 ] */
+    .menu-5 ul{
+        justify-content: space-around;
+    }
+
+    /* [ MENU 6 ] */
+    .menu-6 ul{
+        justify-content: space-between;
+    }
+    /* [ MENU 7 ] */
+    .menu-7 ul{
+        justify-content: space-evenly;
+    }
+
+}

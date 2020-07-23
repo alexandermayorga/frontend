@@ -1,0 +1,31 @@
+body { background: #f9f9f9; }
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.flex-container { 
+    background: cornflowerblue;
+ }
+.item-1,.item-4{ background-color: lightseagreen; }
+.item-2,.item-5{ background-color:brown; }
+.item-3,.item-6{ background-color: goldenrod; }
+.box{
+    height: 100px;
+    width: 320px;
+}
+
+/* [=== Flexbox ===] */
+.flex-container {
+    display: flex
+}
+
+/* Equal Distribution */
+.item-1{  flex-shrink: 1; }
+.item-2{  flex-shrink: 1; }
+.item-3{  flex-shrink: 1; }
+
+/* Different Column Sizing */
+.item-4{  flex-shrink: 4; }
+.item-5{  flex-shrink: 1; }
+.item-6{  flex-shrink: 2; }

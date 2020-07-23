@@ -1,0 +1,89 @@
+body { 
+    background: #f7f7f7;
+    font-family: sans-serif;
+ }
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-1{ background: cornflowerblue; }
+
+.menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a{
+    border:1px solid goldenrod;
+    background-color: lightgray;
+    text-align: center;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.menu a:hover{ background-color: lightslategray; }
+
+
+.menu .social{
+   background-color: salmon;
+   display: flex;
+   justify-content: center;
+}
+
+@media screen and (min-width:768px){
+    .menu{
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu ul{
+        display: flex;
+    }
+
+}
+
+
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+article.post{
+    border:1px solid black;
+    background-color: #FFF;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    flex: 0 1 100%;
+}
+
+article.post .title{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#view-switch{
+    display: none;
+}
+@media screen and (min-width:768px){
+    #view-switch{
+        display: block;
+    }
+    .posts{
+        justify-content: space-between;
+    }
+
+    article.post{
+        flex: 0 1 32%;
+    }
+    .stack article{
+        flex: 0 1 100%;
+    }
+
+}
