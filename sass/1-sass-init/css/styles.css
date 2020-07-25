@@ -1,0 +1,166 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+h1, .h1 {
+  font-size: 2.25rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.flex-justify-evenly {
+  justify-content: space-evenly;
+}
+
+.navbar {
+  background-color: #6495ed;
+  align-items: center;
+}
+
+.navbar ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  flex: 0 0 0;
+}
+
+.navbar li {
+  border-left: 2px solid #EDBC64;
+}
+
+.navbar a {
+  background-color: #f5daa9;
+  display: block;
+  padding: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: lightgray;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards .card {
+  box-sizing: border-box;
+  flex: 0 0 32%;
+  margin-bottom: 15px;
+  min-width: 250px;
+  border: solid 1px black;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cards .card-header {
+  padding: 12px;
+  background-color: #6495ed;
+  color: #FFF;
+}
+
+.cards .card-thumbnail {
+  background-color: lightgray;
+  width: 100%;
+  height: 150px;
+}
+
+.cards .card-body {
+  padding: 24px 12px;
+  background-color: #FFF;
+}
+
+.cards .card-footer {
+  background-color: lightgrey;
+  padding: 12px;
+  color: #2d2d2d;
+}
+
+.cards-reverse {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards-reverse .card {
+  box-sizing: border-box;
+  flex: 0 0 32%;
+  margin-bottom: 15px;
+  min-width: 250px;
+  border: solid 1px black;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cards-reverse .card-header {
+  padding: 12px;
+  background-color: #6495ed;
+  color: #FFF;
+}
+
+.cards-reverse .card-thumbnail {
+  background-color: lightgray;
+  width: 100%;
+  height: 150px;
+}
+
+.cards-reverse .card-body {
+  padding: 24px 12px;
+  background-color: #FFF;
+}
+
+.cards-reverse .card-footer {
+  background-color: lightgrey;
+  padding: 12px;
+  color: #2d2d2d;
+}
+
+.cards-reverse .card-header {
+  background-color: #EDBC64;
+  color: #000;
+}

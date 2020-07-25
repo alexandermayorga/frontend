@@ -1,0 +1,50 @@
+@import 'mixins';
+
+body{
+    margin: 0;
+
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.title{
+    @include mQ2($min: 1200px){
+        text-align: right;
+    }
+
+    @include mQ2($min: 992px, $max: 1199px){
+        text-align: center;
+    }
+
+    @include mQ2($max: 768px){
+        text-align: right;
+    }
+}
+
+.grid{
+    $cols: 6;
+    @include clearfix;
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: pink;
+    @include mQ(778px){
+        background-color: lightblue;
+    }
+
+    li{
+        @include grid($cols, 3%);
+        @include colors($cols);
+    }
+
+    .box{
+        width: 100%;
+        padding: 25% 0;
+        background-color: snow;
+    }
+}
+

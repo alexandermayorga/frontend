@@ -1,0 +1,34 @@
+// [=== MIXIN ===]
+@mixin cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card{
+        box-sizing: border-box;
+        flex: 0 0 32%;
+        margin-bottom: 15px;
+        min-width: 250px;
+        border:solid 1px black;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .card-header{
+        padding: $contentPadding;
+        background-color: $colorPrimary;
+        color: #FFF;
+    }
+    .card-thumbnail{
+        background-color: lightgray;
+        width: 100%;
+        height: 150px;
+    }
+    .card-body{
+        padding: $contentPadding*2 $contentPadding;
+        background-color: #FFF;
+    }
+    .card-footer{
+        background-color: lightgrey;
+        padding: $contentPadding;
+        color:darken($color: lightgray, $amount: 65)
+    }
+}// EOF @mixin cards

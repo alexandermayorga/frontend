@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'globals';
+@import 'utils';
+@import 'mixins';
+@import 'modules/nav';
+
+.wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.cards{
+    @include cards
+}
+.cards-reverse{
+    @include cards;
+    .card-header{
+        background-color: $colorSecondary;
+        color: #000;
+    }
+}

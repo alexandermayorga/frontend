@@ -1,0 +1,24 @@
+.navbar{
+    background-color: $colorPrimary;
+    align-items: center;
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        flex: 0 0 0;
+    }
+    li{
+        border-left: 2px solid $colorSecondary;
+    }
+    a{
+        background-color: lighten($color: $colorSecondary, $amount: 15);
+        display: block;
+        padding: 10px;
+        color:#000;
+        text-decoration: none;
+
+        &:hover{
+            background-color: lightgray;
+        }
+    }
+}// EOF nav.main

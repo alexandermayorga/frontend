@@ -1,0 +1,102 @@
+@mixin clearfix {
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin grid($cols, $margin) {
+    float: left;
+    margin-right: $margin;
+    margin-bottom: $margin;
+    width: (100% - ( ($cols - 1) * $margin ) ) / $cols;
+    &:nth-child(#{$cols}n){
+        margin-right: 0;
+    }
+}
+
+// [=== COLOR ===]
+// Ref: https://sass-lang.com/documentation/modules
+
+// #{( $cols * $multiplier ) + $index }
+@mixin shades($cols, $multiplier, $color) {
+    &:nth-child(#{( $cols * $multiplier ) + 1 }){
+        .box{
+            background-color:  $color;
+        }
+    }
+    &:nth-child(#{( $cols * $multiplier ) + 2 }){
+        .box{
+            background-color: scale-color($color:  $color, $lightness: -15%);
+        }
+    }
+    &:nth-child(#{( $cols * $multiplier ) + 3 }){
+        .box{
+            background-color: scale-color($color:  $color, $lightness: 15%);
+        }
+    }
+    &:nth-child(#{( $cols * $multiplier ) + 4 }){
+        .box{
+            background-color: scale-color($color: $color, $alpha: -50%);
+        }
+    }
+    &:nth-child(#{( $cols * $multiplier ) + 5 }){
+        .box{
+            background-color:  complement($color: $color);
+        }
+    }
+    &:nth-child(#{( $cols * $multiplier ) + 6 }){
+        .box{
+            background-color: scale-color($color:  complement($color: $color), $lightness: -15%);
+        }
+    }
+}
+
+
+@mixin colors($cols) {
+    $color1: red;
+    $color2: green;
+    $color3: blueviolet;
+    $color4: cornflowerblue;
+
+    @include shades($cols, 0, $color1);
+    @include shades($cols, 1, $color2);
+    @include shades($cols, 2, $color3);
+    @include shades($cols, 3, $color4);
+}
+
+// [=== CONTENT ===]
+@mixin mQ($arg...) {
+    @if length($arg) == 1{
+        @media screen and (max-width: nth($arg,1)){
+            @content;
+        }
+    }
+    @if length($arg) == 2{
+        @media screen and (max-width: nth($arg,1)) and (min-width: nth($arg,2)){
+            @content;
+        }
+    }
+}
+
+// [=== Conditional ===]
+@mixin mQ2($min: false, $max: false) {
+    @if $min and $max {
+        @media screen and (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }@else{
+        @if $min{
+            @media screen and (min-width: $min){
+                @content;
+            }
+        }
+        @if $max{
+            @media screen and (max-width: $max){
+                @content;
+            }
+        }
+    }
+}
+
