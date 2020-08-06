@@ -1,0 +1,20 @@
+@import '_colors';
+@import '_typography';
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+
+.jumbotron{
+    &--dark{
+        background-color: $brand-primary;
+    }
+    &--transparent{
+        background-color: transparent;
+    }
+}
+
+.text{
+    &-white{
+        color: #FFF;
+    }
+}
